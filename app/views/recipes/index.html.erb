@@ -1,6 +1,7 @@
 <% @recipes.each do |recipe| %>
 <%= recipe.title %> |
+<%= link_to 'Show', recipe_path(recipe) %> |
 <%= link_to 'Edit', edit_recipe_path(recipe) %>
-<%= button_to('Delete', recipe_path(recipe), method: :delete, data: {confirm:  "Delete #{recipe.title}?"}) %>
+<%= button_to('Delete', recipe_path(recipe), method: :delete, data: {confirm:  "Delete '#{recipe.title}' recipe?"}) %>
 <br>
 <% end %>

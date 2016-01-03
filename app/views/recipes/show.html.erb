@@ -1,0 +1,7 @@
+<h1><%= @recipe.title %></h1>
+<%= image_tag(@recipe.image, alt: 'No image', width: 150) %>
+<p>Ingredients: <%= @recipe.ingredients %></p>
+<p>Method: <%= @recipe.method %></p>
+<br>
+<%= link_to 'Edit', edit_recipe_path(@recipe) %>
+<%= button_to 'Delete', recipe_path(@recipe), method: :delete, data: {confirm: "Delete '#{@recipe.title}' recipe?"} %>
