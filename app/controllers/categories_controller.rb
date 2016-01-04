@@ -14,6 +14,7 @@ class CategoriesController < ApplicationController
   
   def show
     @category = Category.find(params[:id])
+    @recipes = Recipe.all
   end
   
   def edit
@@ -34,6 +35,6 @@ class CategoriesController < ApplicationController
   
   private
     def category_params
-      params.require(:category).permit(:name)
+      params.require(:category).permit(:id, :name)
     end
 end

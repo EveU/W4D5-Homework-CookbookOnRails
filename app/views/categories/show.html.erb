@@ -1,0 +1,10 @@
+<h2><%= @category.name %></h2>
+<% @recipes.each do |recipe| %>
+  <% if recipe.category_id == @category.id %>
+    <%= recipe.title %> |
+    <%= link_to 'Show', recipe_path(recipe) %> |
+    <%= link_to 'Edit', edit_recipe_path(recipe) %>
+    <%= button_to('Delete', recipe_path(recipe), method: :delete, data: {confirm:  "Delete '#{recipe.title}' recipe?"}) %>
+    <br>
+  <% end %>
+<% end %>
