@@ -1,0 +1,7 @@
+<strong>Method:</strong>
+<br>
+<% method = @recipe.method.split('.') %>
+<ol><% method.each do |step| %>
+<li><%= step %></li>
+<br> 
+<% end %></ol>

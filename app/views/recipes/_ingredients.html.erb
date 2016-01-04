@@ -1,0 +1,6 @@
+<strong>Ingredients:</strong>
+<br>
+<% ingredients = @recipe.ingredients.split(',') %>
+<ul><% ingredients.each do |ingredient| %>
+<li><%= ingredient %></li>
+<% end %></ul>
